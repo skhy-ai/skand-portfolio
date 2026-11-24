@@ -393,7 +393,7 @@ export const COMPANY_INFO = {
       },
     ],
 
-    // Christmas & Year-End Bundle Offers (25% Total Discount)
+    // Christmas & Year-End Bundle Offers (25% Total Discount) — 3-Tier Staircase Model
     christmasOffer: {
       title: "Christmas & Year-End Institutional Bundle Offer",
       badge: "25% Off Total • Christmas Offer",
@@ -401,14 +401,17 @@ export const COMPANY_INFO = {
       validNotice: "Valid for Q4 / Year-End Engagements Initiated by Dec 31",
       bundles: [
         {
-          id: "core-bundle",
-          title: "Complete Core & Growth Engineering Suite",
-          tierBadge: "Tier 1 Bundle",
+          id: "tier-1-bundle",
+          tierNumber: "Tier 1",
+          title: "Tier 1: Core Growth Foundation",
+          tierBadge: "Tier 1 Baseline",
           unbundledTotalMYR: "9,200",
           discountedPriceMYR: "6,900",
           savingsMYR: "2,300",
+          summary: "Essential digital presence, transaction processing & secure user foundation.",
           description:
-            "End-to-end commercial web and transaction stack: responsive custom web app, Stripe customer portal and billing, normalized database architecture, OAuth/JWT access control, and modular educational courseware.",
+            "Complete digital presence and transaction stack: responsive custom web app, Stripe customer portal and billing, normalized database architecture, OAuth/JWT access control, and modular educational courseware.",
+          includesPredecessor: null,
           includedServices: [
             "Website & Web Application Development (RM 3,000)",
             "Stripe & Payment Gateway Integration (RM 1,200)",
@@ -419,14 +422,19 @@ export const COMPANY_INFO = {
           highlight: "Ideal for Startups & Fast-Scaling Tech Ventures",
         },
         {
-          id: "enterprise-bundle",
-          title: "Complete Mission-Grade Enterprise Suite",
-          tierBadge: "Tier 2 Bundle",
+          id: "tier-2-bundle",
+          tierNumber: "Tier 2",
+          title: "Tier 2: Advanced Infrastructure & Scale",
+          tierBadge: "Tier 2 • Tier 1 + Advanced Features",
           unbundledTotalMYR: "24,500+",
           discountedPriceMYR: "18,375+",
           savingsMYR: "6,125+",
+          summary: "Everything in Tier 1 PLUS 5 advanced mission-grade infrastructure systems.",
           description:
-            "Institutional sovereign architecture: mission-grade cross-platform application, multi-currency bilateral financing rails, high-scale distributed pgvector database clustering, enterprise SAML SSO + Kyber post-quantum cryptography, and interactive simulation training LMS.",
+            "Builds directly on Tier 1 to deliver institutional sovereign architecture: cross-platform desktop platforms, multi-currency bilateral financing rails, high-scale distributed pgvector clustering, enterprise SAML SSO + Kyber post-quantum cryptography, and interactive simulation training LMS.",
+          includesPredecessor:
+            "Includes Everything in Tier 1 (Web, Payments, Database, Auth, Courseware)",
+          extraFeaturesTitle: "What's Added in Tier 2 (Advanced Infrastructure):",
           includedServices: [
             "Mission-Grade Web & Desktop Platforms (RM 8,500+)",
             "Global Multi-Currency & Bilateral Financing Rails (RM 3,500+)",
@@ -434,23 +442,29 @@ export const COMPANY_INFO = {
             "Enterprise SSO & Post-Quantum Security Hardening (RM 3,000+)",
             "Full-Scale Interactive Simulation LMS (RM 5,000+)",
           ],
-          highlight: "Engineered for Sovereign Defense, Banking & Deep-Tech",
+          highlight: "Engineered for Scaling Platforms & Sovereign Systems",
         },
         {
-          id: "master-bundle",
-          title: "Dual-Tier Sovereign Master Suite (Both Offerings Combined)",
-          tierBadge: "Core + Enterprise All-Inclusive",
+          id: "tier-3-bundle",
+          tierNumber: "Tier 3",
+          title: "Tier 3: Sovereign Enterprise Master Suite",
+          tierBadge: "Tier 3 • All Tier 2 + Enterprise Add-Ons",
           unbundledTotalMYR: "33,700+",
           discountedPriceMYR: "25,275+",
           savingsMYR: "8,425+",
+          summary:
+            "All Tier 1 & Tier 2 systems PLUS all 4 specialized sovereign add-on capabilities.",
           description:
-            "Complete technical engagement combining both Tier 1 Core and Tier 2 Enterprise capabilities with dedicated architecture reviews, production deployment hardening, and zero-cloud-egress guarantees.",
+            "The complete sovereign enterprise stack: combines all Tier 1 Core and Tier 2 Enterprise systems with air-gapped custom sovereign AI RAG chatbots, continuous DAST vulnerability auditing, zero-cloud-egress GPU hardware configuration, and 24/7 dedicated mission engineering SLA.",
+          includesPredecessor: "Includes All Tier 1 Foundation + All Tier 2 Advanced Systems",
+          extraFeaturesTitle: "What's Added in Tier 3 (Specialized Enterprise Add-Ons):",
           includedServices: [
-            "All 5 Core Growth modules (Web App, Stripe, DB, Auth, Courseware)",
-            "All 5 Enterprise Mission systems (Platform, Financing, Vector DB, SAML/PQC, Sim LMS)",
-            "Dedicated mission engineering SLA & priority milestone delivery",
+            "Custom Sovereign AI Chatbots & Private Domain RAG",
+            "Dynamic Application Security Testing (DAST) Vulnerability Auditing",
+            "Zero-Cloud-Egress / On-Premise Air-Gapped GPU Deployments",
+            "Dedicated 24/7 Mission Engineering SLA & Priority Architecture Advisory",
           ],
-          highlight: "Maximum Sovereign Assurance (Save RM 8,425+)",
+          highlight: "Ultimate Sovereign Stack (Save RM 8,425+ on All-Inclusive Scope)",
         },
       ],
     },

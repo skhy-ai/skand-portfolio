@@ -531,13 +531,15 @@ function IndexPage() {
               <span>Christmas Offer • 25% Off Total</span>
             </div>
             <h3 className="text-xl font-bold text-foreground">
-              Institutional Bundle Pricing for Both Engineering Offerings
+              3-Tier Staircase Bundle Pricing (25% Total Discount)
             </h3>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl leading-relaxed">
               Procure complete suites with an automatic 25% discount on the total contract:{" "}
-              <strong>Core Growth Suite at RM 6,900</strong> (was RM 9,200),{" "}
-              <strong>Enterprise Mission Suite at RM 18,375+</strong> (was RM 24,500+), or{" "}
-              <strong>Both Offerings Combined at RM 25,275+</strong> (save RM 8,425+).
+              <strong>Tier 1 Core at RM 6,900</strong> (was RM 9,200),{" "}
+              <strong>Tier 2 Scale (Tier 1 + Advanced Infrastructure) at RM 18,375+</strong> (was RM
+              24,500+), or{" "}
+              <strong>Tier 3 Master Suite (All Tier 2 + Enterprise Add-ons) at RM 25,275+</strong>{" "}
+              (save RM 8,425+).
             </p>
           </div>
           <Link to="/services" hash="christmas-offer" className="shrink-0">

@@ -36,34 +36,35 @@
   --color-moss: var(--moss);
 }
 
-/* Executive Monochromatic & Minimalist Theme */
+/* Luminous Deep Slate with Vibrant High-Tech Accents (Professional & Lively) */
 :root {
   --radius: 0.5rem;
-  --background: #090a0c;
-  --foreground: #f4f4f6;
-  --card: #111317;
-  --card-foreground: #f4f4f6;
-  --popover: #111317;
-  --popover-foreground: #f4f4f6;
-  --primary: #ffffff;
-  --primary-foreground: #090a0c;
-  --secondary: #191c22;
-  --secondary-foreground: #e4e4e7;
-  --muted: #1e2229;
-  --muted-foreground: #8c93a0;
-  --accent: #242932;
-  --accent-foreground: #ffffff;
+  --background: #0b0f17;
+  --foreground: #f8fafc;
+  --card: #121824;
+  --card-foreground: #f8fafc;
+  --popover: #121824;
+  --popover-foreground: #f8fafc;
+  --primary: #f8fafc;
+  --primary-foreground: #0b0f17;
+  --secondary: #1a2234;
+  --secondary-foreground: #e2e8f0;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #1e293b;
+  --accent-foreground: #38bdf8;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #242932;
-  --input: #242932;
-  --ring: #ffffff;
-  --glow: rgba(255, 255, 255, 0.07);
-  --aqua: #d4d4d8;
-  --moss: #a1a1aa;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #38bdf8;
+  --glow: rgba(56, 189, 248, 0.18);
+  --aqua: #38bdf8;
+  --moss: #34d399;
   --gradient-hero:
-    radial-gradient(ellipse at 50% -10%, rgba(255, 255, 255, 0.08), transparent 65%),
-    radial-gradient(ellipse at 80% 25%, rgba(255, 255, 255, 0.03), transparent 50%);
+    radial-gradient(ellipse at 50% -10%, rgba(56, 189, 248, 0.16), transparent 60%),
+    radial-gradient(ellipse at 85% 20%, rgba(52, 211, 153, 0.1), transparent 50%),
+    radial-gradient(ellipse at 15% 35%, rgba(99, 102, 241, 0.09), transparent 50%);
 }
 
 @layer base {
@@ -90,11 +91,11 @@
 
 @utility grid-bg {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
   background-size: 40px 40px;
-  mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
-  opacity: 0.9;
+  mask-image: radial-gradient(ellipse at center, black 45%, transparent 85%);
+  opacity: 0.95;
 }
 
 @utility hero-glow {
@@ -106,9 +107,13 @@
 }
 
 @utility card-hover {
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   &:hover {
-    border-color: rgba(255, 255, 255, 0.22);
-    background-color: #15181d;
+    border-color: rgba(56, 189, 248, 0.35);
+    background-color: #172030;
+    box-shadow:
+      0 12px 32px -10px rgba(11, 15, 23, 0.9),
+      0 0 25px -5px rgba(56, 189, 248, 0.1);
+    transform: translateY(-2px);
   }
 }
