@@ -133,9 +133,9 @@ function IndexPage() {
       </section>
 
       {/* ── 2. The 4 Featured Client Platforms Banner ── */}
-      <section className="relative border-y border-border/80 bg-card/30 py-12 backdrop-blur-xs">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <section className="relative border-y border-border/80 bg-card/30 py-16 backdrop-blur-xs">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-12">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <span className="font-mono text-xs uppercase tracking-[0.25em] text-muted-foreground block mb-1">
                 Authoritative Deployments
@@ -152,16 +152,23 @@ function IndexPage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {/* 4 Client Platforms with Real Website Screenshots in Browser Chrome */}
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {COMPANY_INFO.clients.map((client) => (
               <div
                 key={client.id}
-                className="group relative flex flex-col justify-between rounded-lg border border-border/90 bg-card p-5 card-hover"
+                className="group relative flex flex-col justify-between rounded-xl border border-border/90 bg-card overflow-hidden card-hover"
               >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="rounded-sm bg-secondary px-2 py-0.5 text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
-                      {client.category.split("&")[0].trim()}
+                <div>
+                  {/* Browser Chrome Header */}
+                  <div className="flex items-center justify-between border-b border-border/80 bg-background/80 px-3 py-2 text-[10px] font-mono text-muted-foreground">
+                    <div className="flex items-center gap-1.5">
+                      <span className="h-2 w-2 rounded-full bg-red-500/70" />
+                      <span className="h-2 w-2 rounded-full bg-amber-500/70" />
+                      <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
+                    </div>
+                    <span className="truncate max-w-[140px] text-muted-foreground/70">
+                      {client.domain}
                     </span>
                     <a
                       href={client.url}
@@ -170,36 +177,107 @@ function IndexPage() {
                       className="text-muted-foreground hover:text-foreground transition-colors"
                       title={`Visit ${client.name}`}
                     >
-                      <ArrowUpRight className="h-4 w-4" />
+                      <ArrowUpRight className="h-3.5 w-3.5" />
                     </a>
                   </div>
 
-                  <div>
-                    <h3 className="text-base font-bold text-foreground group-hover:text-foreground transition-colors">
-                      {client.name}
-                    </h3>
-                    <div className="text-[11px] font-mono text-muted-foreground">
-                      {client.domain}
+                  {/* Real Website Screenshot */}
+                  <div className="relative aspect-[16/10] bg-black/80 overflow-hidden border-b border-border/60">
+                    {client.previewImage ? (
+                      <img
+                        src={client.previewImage}
+                        alt={`${client.name} live website screenshot`}
+                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-secondary/50 text-xs font-mono text-muted-foreground">
+                        {client.domain}
+                      </div>
+                    )}
+                    <div className="absolute top-2 left-2 rounded-xs bg-black/80 backdrop-blur-xs px-2 py-0.5 text-[9px] font-mono uppercase text-foreground border border-border/80">
+                      {client.category.split("&")[0].trim()}
                     </div>
                   </div>
 
-                  <p className="text-xs text-muted-foreground/90 line-clamp-3 leading-relaxed">
-                    {client.summary}
-                  </p>
+                  {/* Card Content */}
+                  <div className="p-4 space-y-2">
+                    <h3 className="text-base font-bold text-foreground transition-colors">
+                      {client.name}
+                    </h3>
+                    <p className="text-xs text-muted-foreground/90 line-clamp-3 leading-relaxed">
+                      {client.summary}
+                    </p>
+                  </div>
                 </div>
 
-                <div className="mt-5 pt-3 border-t border-border/60">
+                {/* Card Footer Links */}
+                <div className="p-4 pt-3 border-t border-border/60 flex items-center justify-between text-xs">
+                  <Link
+                    to="/work"
+                    hash={client.id}
+                    className="text-[11px] font-medium text-foreground hover:underline inline-flex items-center gap-1"
+                  >
+                    Case Study <ChevronRight className="h-3 w-3" />
+                  </Link>
                   <a
                     href={client.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-foreground hover:underline"
+                    className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    Launch Live System <ExternalLink className="h-2.5 w-2.5" />
+                    Live Site <ExternalLink className="h-2.5 w-2.5" />
                   </a>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Interactive Simulator Spotlight Strip */}
+          <div className="rounded-xl border border-border bg-gradient-to-r from-card via-background to-card p-6 lg:p-8 flex flex-col lg:flex-row items-center justify-between gap-8 card-hover">
+            <div className="lg:w-1/2 space-y-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-mono text-muted-foreground">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span>Production Interactive Simulator</span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground">
+                GeoHy Lithographic Reactor Simulator
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Test the subterranean geological modeling application targeting 4 to 5 km depths.
+                Features real-time Leaflet GIS overlays, serpentinization thermodynamics, drilling
+                CAPEX/OPEX cost modeling, and 30-year Hy10 gas yield curves.
+              </p>
+              <div className="pt-2 flex flex-wrap items-center gap-3">
+                <Link to="/apps">
+                  <Button size="sm" className="text-xs font-semibold">
+                    Launch Interactive App &amp; Simulators
+                    <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                  </Button>
+                </Link>
+                <a
+                  href="/apps/geohy-simulator.html"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1 text-xs font-mono text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Direct Fullscreen <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:w-1/2 w-full overflow-hidden rounded-lg border border-border bg-black shadow-lg">
+              <div className="flex items-center justify-between border-b border-border/80 bg-background/90 px-3 py-1.5 text-[10px] font-mono text-muted-foreground">
+                <span>geohy-litho-simulator.app</span>
+                <span className="text-emerald-400">Leaflet + Chart.js</span>
+              </div>
+              <img
+                src="/images/websites/geohy-simulator-preview.png"
+                alt="GeoHy Simulator Preview"
+                className="w-full aspect-[16/10] object-cover object-top"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -466,22 +544,23 @@ function IndexPage() {
         </div>
       </section>
 
-      {/* ── 6. Verified Open Source Repositories ── */}
+      {/* ── 6. Verified Open Source Repositories & Architectures ── */}
       <section className="relative border-t border-border/80 bg-card/30 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-5 space-y-3">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-5 space-y-4">
               <span className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground block">
-                Open Source Governance
+                Open Source Governance &amp; Research
               </span>
               <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">
-                Verified Public Repositories
+                Open-Source Engineering &amp; Stacks
               </h2>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                In accordance with our strict verification policy, we feature only public
-                repositories created originally by <code>skhy-ai</code> without upstream forks.
+                SKAND Technologies develops high-assurance open architectures spanning nuclear
+                fusion telemetry, zero-telemetry post-quantum desktop workstations, and system
+                management tooling.
               </p>
-              <div className="rounded-md border border-border bg-background/80 p-3 text-[11px] text-muted-foreground/90 space-y-1">
+              <div className="rounded-md border border-border bg-background/80 p-3.5 text-[11px] text-muted-foreground/90 space-y-2">
                 <strong className="text-foreground block font-medium">
                   Enterprise Access Protocol:
                 </strong>
@@ -490,43 +569,73 @@ function IndexPage() {
                   institutional financial engines are proprietary and distributed exclusively under
                   signed mutual non-disclosure agreements (NDA).
                 </p>
+                <Link
+                  to="/apps"
+                  className="text-foreground hover:underline inline-flex items-center gap-1 font-mono text-[10px] pt-1"
+                >
+                  Explore all open-source architectures &amp; simulators{" "}
+                  <ArrowRight className="h-2.5 w-2.5" />
+                </Link>
               </div>
             </div>
 
             <div className="lg:col-span-7 space-y-4">
-              {COMPANY_INFO.openSource.verifiedRepos.map((repo) => (
+              {COMPANY_INFO.openSourceProjects.map((project) => (
                 <div
-                  key={repo.name}
+                  key={project.id}
                   className="rounded-lg border border-border bg-card p-5 space-y-3 card-hover"
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
-                      <Terminal className="h-4 w-4 text-foreground" />
+                      <Terminal className="h-4 w-4 text-foreground shrink-0" />
                       <span className="font-mono text-sm font-bold text-foreground">
-                        skhy-ai/{repo.name}
+                        {project.name}
                       </span>
                     </div>
-                    <span className="rounded-sm bg-secondary px-2 py-0.5 text-[10px] font-mono uppercase text-muted-foreground">
-                      {repo.language} • Original Non-Forked
+                    <span className="rounded-sm bg-secondary px-2 py-0.5 text-[10px] font-mono uppercase text-muted-foreground self-start sm:self-auto">
+                      {project.status}
                     </span>
                   </div>
 
+                  <div className="text-[11px] font-mono text-muted-foreground">
+                    {project.subtitle}
+                  </div>
+
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    {repo.description}
+                    {project.description}
                   </p>
 
-                  <div className="pt-2 flex items-center justify-between text-xs">
-                    <a
-                      href={repo.repoUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-1 font-medium text-foreground hover:underline"
-                    >
-                      View on GitHub <ExternalLink className="h-3 w-3" />
-                    </a>
-                    <span className="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
-                      <CheckCircle2 className="h-3 w-3" /> Verified Public Tool
-                    </span>
+                  <div className="pt-2 flex flex-wrap items-center justify-between gap-3 text-xs border-t border-border/60">
+                    <div className="flex flex-wrap gap-1">
+                      {project.techStack.slice(0, 4).map((tech) => (
+                        <span
+                          key={tech}
+                          className="rounded-xs bg-secondary/80 px-1.5 py-0.5 text-[9px] font-mono text-muted-foreground"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                      {project.repoUrl ? (
+                        <a
+                          href={project.repoUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 text-[11px] font-medium text-foreground hover:underline"
+                        >
+                          GitHub <ExternalLink className="h-2.5 w-2.5" />
+                        </a>
+                      ) : (
+                        <Link
+                          to="/apps"
+                          className="inline-flex items-center gap-1 text-[11px] font-medium text-foreground hover:underline"
+                        >
+                          Architecture Details <ArrowRight className="h-2.5 w-2.5" />
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

@@ -19,6 +19,12 @@ describe("SKAND Technologies App Routing", () => {
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
 
+  it("matches the interactive apps and simulators page for /apps", () => {
+    const matches = router.matchRoutes("/apps");
+    expect(matches.at(-1)?.routeId).toBe("/apps");
+    expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
+  });
+
   it("matches the services and pricing page for /services", () => {
     const matches = router.matchRoutes("/services");
     expect(matches.at(-1)?.routeId).toBe("/services");

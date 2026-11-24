@@ -171,6 +171,7 @@ function RootComponent() {
   const navLinks = [
     { label: "Overview", href: "/" },
     { label: "Work", href: "/work" },
+    { label: "Apps", href: "/apps" },
     { label: "Services & Pricing", href: "/services" },
     { label: "Contact", href: "/contact" },
   ];

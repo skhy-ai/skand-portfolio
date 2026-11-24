@@ -80,6 +80,7 @@ export const COMPANY_INFO = {
       videoId: "Z_lzV_X4cis",
       videoTitle: "Vidur Manager Overview & Task Execution",
       image: "/images/products/threat-awareness/threat-awareness-planning-network.png",
+      previewImage: "/images/websites/skhy-preview.png",
     },
     {
       id: "swarn",
@@ -96,6 +97,7 @@ export const COMPANY_INFO = {
         "Encrypted sovereign deal-room and private credit facility orchestration",
       ],
       image: null,
+      previewImage: "/images/websites/swarncapital-preview.png",
     },
     {
       id: "geohy",
@@ -112,6 +114,9 @@ export const COMPANY_INFO = {
         "Midstream pipeline-compatible Hy10 synthetic hydrogen/methane fuel blend",
       ],
       image: null,
+      previewImage: "/images/websites/geohy-preview.png",
+      simulatorUrl: "/apps/geohy-simulator.html",
+      simulatorImage: "/images/websites/geohy-simulator-preview.png",
     },
     {
       id: "shieldpq",
@@ -128,6 +133,104 @@ export const COMPANY_INFO = {
         "Encrypted local Quarantine Vault with active file remediation",
       ],
       image: null,
+      previewImage: "/images/websites/shieldpq-preview.png",
+    },
+  ],
+
+  // Interactive Simulators & Apps Catalog
+  simulators: [
+    {
+      id: "geohy-litho",
+      title: "GeoHy Lithographic Reactor Simulator",
+      category: "Clean Energy & Subterranean Physics",
+      description:
+        "Interactive geologic hydrogen modeling application targeting 4-5 km depths. Features dynamic Leaflet source (ultramafic), heat, and seal overlays, lateral drill path trajectory design, CAPEX/OPEX cost calculation, and 30-year Hy10 gas yield curves.",
+      appUrl: "/apps/geohy-simulator.html",
+      previewImage: "/images/websites/geohy-simulator-preview.png",
+      badge: "Production Interactive App",
+      tags: ["Leaflet Map", "FTT Synthesis", "CAPEX/OPEX Modeling", "Hy10 Yield Curves"],
+      externalOrigin: "https://geohy.com",
+    },
+    {
+      id: "skhy-mission-architect",
+      title: "Skhy AI Mission Architect & Scenario Planner",
+      category: "Defense Intelligence & Avionics",
+      description:
+        "4-phase mission configuration wizard for defense UAVs, rovers, and sensor meshes. Generates deterministic electronic wiring blueprints, power distribution budgets, and persistent scenario profiles.",
+      previewImage: "/images/products/mission-architect/mission_architect_map.png",
+      badge: "Scenario Architecture",
+      tags: ["Mermaid Blueprint", "Power Budgeting", "RF Resilience", "Avionics Topology"],
+      externalOrigin: "https://skhy.systems",
+    },
+    {
+      id: "skhy-threat-awareness",
+      title: "Skhy Threat Awareness Tactical Planner",
+      category: "Counter-UAS & Situational Awareness",
+      description:
+        "Tactical sensor coverage planning engine modeling coastal radar lines-of-sight, acoustic sensor blindspot elimination, hostile threat ETA calculation, and automated deployment Bill-of-Materials (BOM).",
+      previewImage: "/images/products/threat-awareness/threat-awareness-planning-network.png",
+      badge: "Tactical Planning Engine",
+      tags: ["Radar Mesh", "Hostile ETA", "Deployment BOM", "Edge Sensor Fusion"],
+      externalOrigin: "https://skhy.systems",
+    },
+  ],
+
+  // Open Source Engineering Projects
+  openSourceProjects: [
+    {
+      id: "tami-cama",
+      name: "TAMI-CAMA",
+      subtitle: "Telemetry, Analytics, Monitoring & Integration Architecture Stack",
+      category: "Nuclear Fusion & Industrial Control (I&C)",
+      description:
+        "Enterprise Instrumentation & Control (I&C) stack and multi-reactor digital twin for Quasi-Isodynamic (QI-HTS) Stellarators, Advanced Tokamaks, and Inertial Confinement Fusion (ICF). Engineered with an Obsidian Tactical C2 interface, strict Purdue 6-Tier architecture isolation, and IEC 62443 zero-trust conduits.",
+      highlights: [
+        "3D WebGL Multi-Reactor Digital Twin Studio (Stellarator, Tokamak, ICF) with Three.js",
+        "2D Interactive Sankey Energy Flow Simulator computing net electrical gain (Q_sci)",
+        "Level 1 Edge Quench Protection Kernel in Rust (<50μs breaker actuation into helium dump)",
+        "Polymorphic Protocol Buffers schema (skhy_telemetry.proto) tracking 18 failure modes",
+      ],
+      techStack: [
+        "Rust",
+        "Three.js",
+        "Python / FastAPI",
+        "Protocol Buffers",
+        "Strawberry GraphQL",
+        "HDF5",
+      ],
+      status: "Verified Open Source Architecture",
+    },
+    {
+      id: "ultrasudo",
+      name: "Ultrasudo",
+      subtitle: "Secure & Private Post-Quantum Desktop Workspace",
+      category: "Cybersecurity & Operating Systems",
+      description:
+        "High-performance, secure, and purely private desktop environment built with React 19, Rust, Electron, and Tauri. Features native local Post-Quantum Cryptography (Kyber-1024, AES-256-GCM) protecting user credentials, notes, and datasets without telemetry egress.",
+      highlights: [
+        "Native Post-Quantum Security with local Kyber-1024 KEM and AES-256-GCM encryption",
+        "Dual Runtime Support: Runs seamlessly across Electron and ultra-lightweight Tauri",
+        "Consolidated Native Hubs: Finance Hub, Productivity Hub (Kanban/Pomodoro), and Health Suite",
+        "Zero-tracking feeds stripped of telemetry, corporate tracking, and analytic scripts",
+      ],
+      techStack: ["React 19", "Rust", "Tauri", "Electron", "Kyber-1024 PQC", "Chart.js"],
+      status: "Verified Open Source Architecture",
+    },
+    {
+      id: "wsl-cleaner",
+      name: "wsl-linux-disk-manager-cleaner",
+      subtitle: "WSL2 Virtual Disk Compact & Storage Reclamation Utility",
+      category: "Developer Tooling & System Administration",
+      description:
+        "Custom Linux/Windows utility script engineered by skhy-ai to audit, analyze, and shrink dynamically expanding WSL2 virtual hard disk files (ext4.vhdx) on Windows host machines, reclaiming gigabytes of disk space.",
+      highlights: [
+        "Automated ext4.vhdx size audit and unused sector trimming",
+        "Safe disk shrinking without risking Linux distribution corruption",
+        "One-command execution for development workstations",
+      ],
+      techStack: ["Shell", "PowerShell", "WSL2", "Hyper-V"],
+      repoUrl: "https://github.com/skhy-ai/wsl-linux-disk-manager-cleaner",
+      status: "Public GitHub Repository",
     },
   ],
 
@@ -291,19 +394,9 @@ export const COMPANY_INFO = {
     ],
   },
 
-  // Verified Public Repositories (Original, Non-Forked Only)
+  // Open Source Governance & Notice
   openSource: {
-    verifiedRepos: [
-      {
-        name: "wsl-linux-disk-manager-cleaner",
-        repoUrl: "https://github.com/skhy-ai/wsl-linux-disk-manager-cleaner",
-        description:
-          "Custom Linux/Windows utility script engineered by skhy-ai to audit, analyze, and shrink dynamically expanding WSL2 virtual hard disks (ext4.vhdx) on Windows host systems.",
-        language: "Shell",
-        isOriginal: true,
-      },
-    ],
     enterpriseNotice:
-      "All core sovereign defense intelligence, Vidur execution middleware, and institutional financial engines are proprietary and distributed exclusively under enterprise licensing or signed mutual non-disclosure agreements (NDA).",
+      "Proprietary defense intelligence, Vidur execution middleware, and institutional financial engines are distributed exclusively under enterprise licensing or signed mutual non-disclosure agreements (NDA).",
   },
 };

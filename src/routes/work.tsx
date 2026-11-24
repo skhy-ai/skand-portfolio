@@ -189,43 +189,73 @@ function WorkPage() {
             </div>
           </div>
 
-          {/* Real Skhy Product Gallery */}
+          {/* Real Skhy Product Gallery & Scenario Planners */}
           <div className="pt-4 border-t border-border/60">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-4">
-              Validated System Diagrams &amp; Airframe Hardware
-            </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              <div className="rounded-lg border border-border bg-background p-2 space-y-2">
-                <img
-                  src="/images/products/threat-awareness/threat-awareness-planning-network.png"
-                  alt="Threat Awareness Planning Network"
-                  className="rounded-md w-full aspect-video object-cover"
-                  loading="lazy"
-                />
-                <div className="px-1 text-[11px] font-mono text-muted-foreground">
-                  Threat Awareness Planning Network HUD
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
+                Validated System Diagrams, Scenario Planners &amp; Airframe Hardware
+              </h3>
+              <Link
+                to="/apps"
+                className="text-[11px] font-mono text-foreground hover:underline inline-flex items-center gap-1"
+              >
+                Inspect Mission Architect in Apps <ArrowRight className="h-3 w-3" />
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="rounded-lg border border-border bg-background p-2 space-y-2 card-hover">
+                <div className="relative aspect-video overflow-hidden rounded-md bg-black">
+                  <img
+                    src="/images/websites/skhy-preview.png"
+                    alt="Skhy AI Live Website Interface"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="px-1 text-[11px] font-mono text-foreground font-medium">
+                  Live Platform: skhy.systems
                 </div>
               </div>
-              <div className="rounded-lg border border-border bg-background p-2 space-y-2">
-                <img
-                  src="/images/products/delta_wing_drone.png"
-                  alt="Delta Wing Drone Airframe"
-                  className="rounded-md w-full aspect-video object-cover"
-                  loading="lazy"
-                />
-                <div className="px-1 text-[11px] font-mono text-muted-foreground">
-                  Delta Wing Interceptor Airframe (CFD)
+
+              <div className="rounded-lg border border-border bg-background p-2 space-y-2 card-hover">
+                <div className="relative aspect-video overflow-hidden rounded-md bg-black">
+                  <img
+                    src="/images/products/mission-architect/mission_architect_map.png"
+                    alt="Skhy Mission Architect Scenario Planner"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="px-1 text-[11px] font-mono text-foreground font-medium">
+                  Mission Architect Blueprint Planner
                 </div>
               </div>
-              <div className="rounded-lg border border-border bg-background p-2 space-y-2">
-                <img
-                  src="/images/products/threat-awareness/coastal-planning.png"
-                  alt="Coastal Planning Coverage"
-                  className="rounded-md w-full aspect-video object-cover"
-                  loading="lazy"
-                />
-                <div className="px-1 text-[11px] font-mono text-muted-foreground">
-                  Coastal Radar &amp; Acoustic Sensor Mesh
+
+              <div className="rounded-lg border border-border bg-background p-2 space-y-2 card-hover">
+                <div className="relative aspect-video overflow-hidden rounded-md bg-black">
+                  <img
+                    src="/images/products/threat-awareness/threat-awareness-planning-network.png"
+                    alt="Threat Awareness Planning Network"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="px-1 text-[11px] font-mono text-foreground font-medium">
+                  Threat Awareness Planning HUD
+                </div>
+              </div>
+
+              <div className="rounded-lg border border-border bg-background p-2 space-y-2 card-hover">
+                <div className="relative aspect-video overflow-hidden rounded-md bg-black">
+                  <img
+                    src="/images/products/delta_wing_drone.png"
+                    alt="Delta Wing Drone Airframe"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="px-1 text-[11px] font-mono text-foreground font-medium">
+                  Delta Wing Interceptor Airframe
                 </div>
               </div>
             </div>
@@ -235,7 +265,7 @@ function WorkPage() {
         {/* ── Case Study 2: Swarn Capital ── */}
         <section
           id="swarn"
-          className="rounded-2xl border border-border bg-card p-6 sm:p-10 space-y-6"
+          className="rounded-2xl border border-border bg-card p-6 sm:p-10 space-y-8"
         >
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-border/80 pb-6">
             <div className="space-y-1">
@@ -272,38 +302,64 @@ function WorkPage() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 text-xs sm:text-sm text-muted-foreground leading-relaxed">
-            <div className="rounded-lg border border-border/80 bg-background/60 p-5 space-y-2">
-              <h3 className="text-xs font-mono font-bold uppercase text-foreground">
-                Sovereign Asset Placements
-              </h3>
-              <p>
-                Structured institutional capital placements and bilateral asset financing for
-                sovereign states and central banks, executed strictly principal-to-principal under
-                ECB frameworks and BIS guidelines.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Website Screenshot with Browser Chrome */}
+            <div className="lg:col-span-5">
+              <div className="overflow-hidden rounded-xl border border-border bg-background shadow-xl">
+                <div className="flex items-center justify-between border-b border-border/80 bg-background/90 px-3 py-2 text-[10px] font-mono text-muted-foreground">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-red-500/70" />
+                    <span className="h-2 w-2 rounded-full bg-amber-500/70" />
+                    <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
+                  </div>
+                  <span>swarncapital.com</span>
+                  <ExternalLink className="h-3 w-3" />
+                </div>
+                <div className="aspect-[16/10] bg-black/80 overflow-hidden">
+                  <img
+                    src="/images/websites/swarncapital-preview.png"
+                    alt="Swarn Capital Live Platform Screenshot"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
             </div>
 
-            <div className="rounded-lg border border-border/80 bg-background/60 p-5 space-y-2">
-              <h3 className="text-xs font-mono font-bold uppercase text-foreground">
-                Corporate Credit Facilities (€5M+)
-              </h3>
-              <p>
-                Direct corporate credit facilities and closed-loop supply chain financing
-                underwritten on AAA offtakers, bypassing public syndicates or speculative retail
-                roadshows.
-              </p>
-            </div>
+            {/* Architecture Highlights */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-muted-foreground leading-relaxed">
+              <div className="rounded-lg border border-border/80 bg-background/60 p-4 space-y-2">
+                <h3 className="text-xs font-mono font-bold uppercase text-foreground">
+                  Sovereign Asset Placements
+                </h3>
+                <p>
+                  Structured institutional capital placements and bilateral asset financing for
+                  sovereign states and central banks, executed strictly principal-to-principal under
+                  ECB frameworks and BIS guidelines.
+                </p>
+              </div>
 
-            <div className="rounded-lg border border-border/80 bg-background/60 p-5 space-y-2">
-              <h3 className="text-xs font-mono font-bold uppercase text-foreground">
-                Zero-Leakage Deal Room
-              </h3>
-              <p>
-                Confidential mandate orchestration with cryptographic document tracking, verifying
-                counterparties through high-assurance digital credentials and tamper-evident audit
-                logs.
-              </p>
+              <div className="rounded-lg border border-border/80 bg-background/60 p-4 space-y-2">
+                <h3 className="text-xs font-mono font-bold uppercase text-foreground">
+                  Corporate Credit (€5M+)
+                </h3>
+                <p>
+                  Direct corporate credit facilities and closed-loop supply chain financing
+                  underwritten on AAA offtakers, bypassing public syndicates or speculative retail
+                  roadshows.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-border/80 bg-background/60 p-4 space-y-2">
+                <h3 className="text-xs font-mono font-bold uppercase text-foreground">
+                  Zero-Leakage Deal Room
+                </h3>
+                <p>
+                  Confidential mandate orchestration with cryptographic document tracking, verifying
+                  counterparties through high-assurance digital credentials and tamper-evident audit
+                  logs.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -311,7 +367,7 @@ function WorkPage() {
         {/* ── Case Study 3: GeoHy ── */}
         <section
           id="geohy"
-          className="rounded-2xl border border-border bg-card p-6 sm:p-10 space-y-6"
+          className="rounded-2xl border border-border bg-card p-6 sm:p-10 space-y-8"
         >
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-border/80 pb-6">
             <div className="space-y-1">
@@ -338,17 +394,96 @@ function WorkPage() {
                 </a>
               </p>
             </div>
-            <a
-              href="https://geohy.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-foreground px-4 py-2 text-xs font-medium text-background hover:bg-foreground/90 transition-colors"
-            >
-              Visit Live Platform <ExternalLink className="h-3.5 w-3.5" />
-            </a>
+            <div className="flex items-center gap-2">
+              <Link
+                to="/apps"
+                className="inline-flex items-center gap-1.5 rounded-md border border-border bg-secondary px-3.5 py-2 text-xs font-medium text-foreground hover:bg-foreground hover:text-background transition-colors"
+              >
+                Launch Simulator App <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+              <a
+                href="https://geohy.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="shrink-0 inline-flex items-center gap-2 rounded-md bg-foreground px-4 py-2 text-xs font-medium text-background hover:bg-foreground/90 transition-colors"
+              >
+                Visit Live Platform <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-xs text-muted-foreground leading-relaxed">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Website Screenshot with Browser Chrome */}
+            <div className="lg:col-span-6">
+              <div className="overflow-hidden rounded-xl border border-border bg-background shadow-xl">
+                <div className="flex items-center justify-between border-b border-border/80 bg-background/90 px-3 py-2 text-[10px] font-mono text-muted-foreground">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-red-500/70" />
+                    <span className="h-2 w-2 rounded-full bg-amber-500/70" />
+                    <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
+                  </div>
+                  <span>geohy.com</span>
+                  <ExternalLink className="h-3 w-3" />
+                </div>
+                <div className="aspect-[16/10] bg-black/80 overflow-hidden">
+                  <img
+                    src="/images/websites/geohy-preview.png"
+                    alt="GeoHy Live Platform Screenshot"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Interactive Simulator Spotlight */}
+            <div className="lg:col-span-6 space-y-4">
+              <div className="rounded-xl border border-border bg-background/80 p-5 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="rounded-xs bg-secondary px-2 py-0.5 text-[10px] font-mono uppercase text-muted-foreground">
+                    Interactive Application
+                  </span>
+                  <span className="text-[11px] font-mono text-emerald-400 flex items-center gap-1">
+                    <CheckCircle2 className="h-3 w-3" /> Live in /apps
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-foreground">
+                  GeoHy Lithographic Reactor Simulator
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Interactive geological modeling app targeting 4-5 km mantle depths with Leaflet
+                  ultramafic overlays, CAPEX/OPEX cost calculation, and 30-year Hy10 gas yield
+                  projections.
+                </p>
+                <div className="overflow-hidden rounded-md border border-border/70 bg-black aspect-video relative">
+                  <img
+                    src="/images/websites/geohy-simulator-preview.png"
+                    alt="GeoHy Simulator Preview"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="pt-1 flex items-center justify-between">
+                  <Link
+                    to="/apps"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-foreground hover:underline"
+                  >
+                    Launch Simulator in Apps Hub <ArrowRight className="h-3.5 w-3.5" />
+                  </Link>
+                  <a
+                    href="/apps/geohy-simulator.html"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-xs font-mono text-muted-foreground hover:text-foreground inline-flex items-center gap-1"
+                  >
+                    Fullscreen <ExternalLink className="h-3 w-3" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-xs text-muted-foreground leading-relaxed pt-2">
             <div className="rounded-lg border border-border/80 bg-background/60 p-4 space-y-2">
               <h3 className="font-mono font-bold uppercase text-foreground text-xs">
                 Lithospheric Reactors
@@ -394,7 +529,7 @@ function WorkPage() {
         {/* ── Case Study 4: SecureShieldPQ ── */}
         <section
           id="shieldpq"
-          className="rounded-2xl border border-border bg-card p-6 sm:p-10 space-y-6"
+          className="rounded-2xl border border-border bg-card p-6 sm:p-10 space-y-8"
         >
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-border/80 pb-6">
             <div className="space-y-1">
@@ -432,90 +567,169 @@ function WorkPage() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm text-muted-foreground leading-relaxed">
-            <div className="rounded-lg border border-border/80 bg-background/60 p-5 space-y-2">
-              <div className="flex items-center gap-2 text-foreground font-mono font-bold text-xs">
-                <Lock className="h-4 w-4" /> Zero-Cloud-Egress Sentinel
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Website Screenshot with Browser Chrome */}
+            <div className="lg:col-span-5">
+              <div className="overflow-hidden rounded-xl border border-border bg-background shadow-xl">
+                <div className="flex items-center justify-between border-b border-border/80 bg-background/90 px-3 py-2 text-[10px] font-mono text-muted-foreground">
+                  <div className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-red-500/70" />
+                    <span className="h-2 w-2 rounded-full bg-amber-500/70" />
+                    <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
+                  </div>
+                  <span>shieldpq.com</span>
+                  <ExternalLink className="h-3 w-3" />
+                </div>
+                <div className="aspect-[16/10] bg-black/80 overflow-hidden">
+                  <img
+                    src="/images/websites/shieldpq-preview.png"
+                    alt="SecureShieldPQ Live Platform Screenshot"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
               </div>
-              <p>
-                Desktop threat sentinel operating strictly on-premise without telemetry egress.
-                Features two-stage verification eliminating false positives and a real-time
-                streaming IPC HUD.
-              </p>
             </div>
 
-            <div className="rounded-lg border border-border/80 bg-background/60 p-5 space-y-2">
-              <div className="flex items-center gap-2 text-foreground font-mono font-bold text-xs">
-                <Shield className="h-4 w-4" /> Native DAST &amp; Post-Quantum Audit
+            {/* Architecture Highlights */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-muted-foreground leading-relaxed">
+              <div className="rounded-lg border border-border/80 bg-background/60 p-4 space-y-2">
+                <div className="flex items-center gap-2 text-foreground font-mono font-bold text-xs">
+                  <Lock className="h-4 w-4" /> Zero-Cloud-Egress Sentinel
+                </div>
+                <p>
+                  Desktop threat sentinel operating strictly on-premise without telemetry egress.
+                  Features two-stage verification eliminating false positives and a real-time
+                  streaming IPC HUD.
+                </p>
               </div>
-              <p>
-                Zero-dependency Node.js dynamic security scanner verifying security headers (CSP,
-                HSTS), TLS ciphers, and Post-Quantum hybrid algorithm readiness (Kyber / ML-KEM).
-              </p>
-            </div>
 
-            <div className="rounded-lg border border-border/80 bg-background/60 p-5 space-y-2">
-              <div className="flex items-center gap-2 text-foreground font-mono font-bold text-xs">
-                <HardDrive className="h-4 w-4" /> Encrypted Quarantine Vault
+              <div className="rounded-lg border border-border/80 bg-background/60 p-4 space-y-2">
+                <div className="flex items-center gap-2 text-foreground font-mono font-bold text-xs">
+                  <Shield className="h-4 w-4" /> Native DAST &amp; PQC Audit
+                </div>
+                <p>
+                  Zero-dependency Node.js dynamic security scanner verifying security headers (CSP,
+                  HSTS), TLS ciphers, and Post-Quantum hybrid algorithm readiness (Kyber / ML-KEM).
+                </p>
               </div>
-              <p>
-                Automated file remediation with encrypted quarantine isolation (
-                <code>userData/Quarantine/</code>), disarming malicious extensions and stripping
-                malicious PDF scripts.
-              </p>
+
+              <div className="rounded-lg border border-border/80 bg-background/60 p-4 space-y-2">
+                <div className="flex items-center gap-2 text-foreground font-mono font-bold text-xs">
+                  <HardDrive className="h-4 w-4" /> Quarantine Vault
+                </div>
+                <p>
+                  Automated file remediation with encrypted quarantine isolation (
+                  <code>userData/Quarantine/</code>), disarming malicious extensions and stripping
+                  malicious PDF scripts.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── Verified Open Source Repositories ── */}
-        <section className="rounded-2xl border border-border bg-card p-6 sm:p-10 space-y-6">
-          <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-mono text-muted-foreground">
-              <Terminal className="h-3.5 w-3.5 text-foreground" />
-              <span>Public Code Repositories</span>
+        {/* ── Verified Open Source Stacks & Repositories ── */}
+        <section className="rounded-2xl border border-border bg-card p-6 sm:p-10 space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div className="space-y-2">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-mono text-muted-foreground">
+                <Terminal className="h-3.5 w-3.5 text-foreground" />
+                <span>Open Source Engineering Stacks</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
+                Open-Source Systems &amp; Public Tooling
+              </h2>
+              <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
+                Review verified open-source engineering systems developed by SKAND Technologies,
+                including reactor-grade fusion digital twins and post-quantum private workspaces.
+              </p>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-              Verified Public Code &amp; Enterprise Governance
-            </h2>
-            <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
-              Following strict verification standards, only original non-forked public repositories
-              created by <code>skhy-ai</code> are listed below.
-            </p>
+            <Link to="/apps">
+              <Button size="sm" variant="default" className="text-xs">
+                View Full Open Source Hub <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+              </Button>
+            </Link>
           </div>
 
-          <div className="rounded-xl border border-border/90 bg-background/70 p-6 space-y-4">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-              <div>
-                <h3 className="font-mono text-base font-bold text-foreground flex items-center gap-2">
-                  <Terminal className="h-4 w-4 text-foreground" />
-                  skhy-ai/wsl-linux-disk-manager-cleaner
-                </h3>
-                <span className="text-xs font-mono text-muted-foreground">
-                  Language: Shell • Status: Original Public Repository
-                </span>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* TAMI-CAMA Card */}
+            <div className="rounded-xl border border-border/90 bg-background/70 p-5 space-y-3 flex flex-col justify-between card-hover">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono uppercase text-muted-foreground">
+                    Nuclear Fusion
+                  </span>
+                  <span className="text-[10px] font-mono text-emerald-400">Verified Arch</span>
+                </div>
+                <h3 className="font-mono text-base font-bold text-foreground">TAMI-CAMA</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Enterprise I&amp;C telemetry stack and multi-reactor digital twin for
+                  Quasi-Isodynamic Stellarators, Tokamaks, and ICF with sub-50μs Rust quench
+                  protection.
+                </p>
               </div>
-              <a
-                href="https://github.com/skhy-ai/wsl-linux-disk-manager-cleaner"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1.5 rounded-md border border-border bg-secondary px-3.5 py-1.5 text-xs font-medium text-foreground hover:bg-foreground hover:text-background transition-colors"
-              >
-                Inspect on GitHub <ExternalLink className="h-3 w-3" />
-              </a>
+              <div className="pt-3 border-t border-border/60">
+                <Link
+                  to="/apps"
+                  className="text-xs font-medium text-foreground hover:underline inline-flex items-center gap-1"
+                >
+                  Explore TAMI-CAMA Architecture <ArrowRight className="h-3 w-3" />
+                </Link>
+              </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-              A specialized utility engineered to audit and compact Windows Subsystem for Linux
-              (WSL2) dynamically expanding virtual hard disk files (<code>ext4.vhdx</code>). Fixes
-              the common Windows developer issue where deleting files inside Linux fails to reclaim
-              drive space on the host machine.
-            </p>
+            {/* Ultrasudo Card */}
+            <div className="rounded-xl border border-border/90 bg-background/70 p-5 space-y-3 flex flex-col justify-between card-hover">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono uppercase text-muted-foreground">
+                    Post-Quantum Desktop
+                  </span>
+                  <span className="text-[10px] font-mono text-emerald-400">Verified Arch</span>
+                </div>
+                <h3 className="font-mono text-base font-bold text-foreground">Ultrasudo</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Private, sovereign desktop workspace suite built with React 19, Rust, Tauri, and
+                  local Kyber-1024 encryption with zero cloud telemetry.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-border/60">
+                <Link
+                  to="/apps"
+                  className="text-xs font-medium text-foreground hover:underline inline-flex items-center gap-1"
+                >
+                  Explore Ultrasudo Suite <ArrowRight className="h-3 w-3" />
+                </Link>
+              </div>
+            </div>
 
-            <div className="pt-2 border-t border-border/60 text-[11px] font-mono text-muted-foreground flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-              <span className="text-emerald-400 flex items-center gap-1">
-                <CheckCircle2 className="h-3 w-3" /> Public &amp; Verifiable Source
-              </span>
-              <span>Proprietary Defense Repositories: Protected under Mutual NDA</span>
+            {/* WSL Cleaner Utility Card */}
+            <div className="rounded-xl border border-border/90 bg-background/70 p-5 space-y-3 flex flex-col justify-between card-hover">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono uppercase text-muted-foreground">
+                    Developer Tooling
+                  </span>
+                  <span className="text-[10px] font-mono text-emerald-400">Public GitHub</span>
+                </div>
+                <h3 className="font-mono text-base font-bold text-foreground truncate">
+                  wsl-linux-disk-cleaner
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Utility script to audit, analyze, and shrink dynamically expanding WSL2 virtual
+                  hard disk files (<code>ext4.vhdx</code>) on Windows host machines.
+                </p>
+              </div>
+              <div className="pt-3 border-t border-border/60 flex items-center justify-between text-xs">
+                <a
+                  href="https://github.com/skhy-ai/wsl-linux-disk-manager-cleaner"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-foreground hover:underline inline-flex items-center gap-1"
+                >
+                  GitHub Repository <ExternalLink className="h-3 w-3" />
+                </a>
+              </div>
             </div>
           </div>
         </section>
