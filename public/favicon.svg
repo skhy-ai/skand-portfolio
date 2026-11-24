@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0284c7" flood-opacity="0.3" />
+    </filter>
+  </defs>
+  <!-- Background rounded canvas -->
+  <rect width="64" height="64" rx="16" fill="#090d16" />
+  
+  <!-- Outer diamond lattice -->
+  <path d="M32 10 L52 32 L32 54 L12 32 Z" fill="none" stroke="#0284c7" stroke-width="2" stroke-opacity="0.4" />
+  
+  <!-- Central core diamond -->
+  <path d="M32 15 L48 32 L32 49 L16 32 Z" fill="url(#primaryGrad)" filter="url(#glow)" />
+  
+  <!-- Inner core node -->
+  <circle cx="32" cy="32" r="5" fill="#ffffff" />
+  <circle cx="32" cy="32" r="2.5" fill="#0284c7" />
+  
+  <!-- Corner satellite nodes -->
+  <circle cx="32" cy="15" r="2" fill="#38bdf8" />
+  <circle cx="48" cy="32" r="2" fill="#38bdf8" />
+  <circle cx="32" cy="49" r="2" fill="#38bdf8" />
+  <circle cx="16" cy="32" r="2" fill="#38bdf8" />
+</svg>
+

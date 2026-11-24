@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AI Middleware Public Sitemap & AI Crawler Discovery Manifest
+  Primary Domain: https://aimiddleware.io/
+  Launch Target: Dev 7, 2026 (2026-12-07)
+  Architecture: Vidur Execution, DataC Hygiene, DataS Telemetry, aimiddleware LangGraph DAG
+  Keywords: AI middleware, multi-agent orchestration, Vidur, DataC, DataS, LangGraph DAG, ROS2 telemetry, edge AI, self-hosted LLM, 22 domain task pipelines, autonomous agents, Mil-Spec physics, Git LFS downloads, Dev 7 2026
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- Homepage / Main Hub -->
+  <url>
+    <loc>https://aimiddleware.io/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Launch Waitlist - Official Launch Dev 7, 2026 -->
+  <url>
+    <loc>https://aimiddleware.io/#waitlist</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Four Decoupled Products Architecture -->
+  <url>
+    <loc>https://aimiddleware.io/#products</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Platform Features & 22-Domain Task Pipelines -->
+  <url>
+    <loc>https://aimiddleware.io/#features</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Git LFS Binary Downloads & Desktop Studio Cockpit -->
+  <url>
+    <loc>https://aimiddleware.io/#download</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Multi-Cloud & Bare Metal Deployment (AWS, Azure, GCP, GPU Clouds) -->
+  <url>
+    <loc>https://aimiddleware.io/#deploy</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Defense & Industrial Partner Prospectus -->
+  <url>
+    <loc>https://aimiddleware.io/partner</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+</urlset>
