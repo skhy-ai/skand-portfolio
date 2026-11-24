@@ -350,77 +350,49 @@ function RootComponent() {
               </ul>
             </div>
 
-            {/* Corporate Registered Entities */}
+            {/* Corporate Registered Entity */}
             <div className="lg:col-span-5 space-y-4">
               <h4 className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-foreground">
-                Registered Corporate Entities
+                Registered Corporate Entity
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {/* Malaysia Entity */}
-                <div className="rounded-md border border-border/80 bg-background/60 p-3.5 space-y-1.5">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground block">
-                    International Sales Office
-                  </span>
-                  <div className="text-xs font-semibold text-foreground">
-                    {COMPANY_INFO.malaysiaEntity.legalName}
-                  </div>
-                  <div className="text-[11px] font-mono text-muted-foreground">
-                    Reg: {COMPANY_INFO.malaysiaEntity.registrationNo}
-                  </div>
-                  <p className="text-[11px] text-muted-foreground/90 leading-snug pt-1">
-                    {COMPANY_INFO.malaysiaEntity.building}
-                    <br />
-                    {COMPANY_INFO.malaysiaEntity.street}
-                    <br />
-                    {COMPANY_INFO.malaysiaEntity.postalCode} {COMPANY_INFO.malaysiaEntity.city},{" "}
-                    {COMPANY_INFO.malaysiaEntity.country}
-                  </p>
+              <div className="rounded-md border border-border/80 bg-background/60 p-4 space-y-2">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground block">
+                  International Corporate Office
+                </span>
+                <div className="text-sm font-semibold text-foreground">
+                  {COMPANY_INFO.malaysiaEntity.legalName}
                 </div>
-
-                {/* India Entity */}
-                <div className="rounded-md border border-border/80 bg-background/60 p-3.5 space-y-1.5">
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground block">
-                    Global Headquarters &amp; R&amp;D
+                <div className="text-xs font-mono text-muted-foreground">
+                  Registration No:{" "}
+                  <span className="text-foreground">
+                    {COMPANY_INFO.malaysiaEntity.registrationNo}
                   </span>
-                  <div className="text-xs font-semibold text-foreground">
-                    {COMPANY_INFO.indiaEntity.legalName}
-                  </div>
-                  <div className="text-[11px] font-mono text-muted-foreground">
-                    CIN: {COMPANY_INFO.indiaEntity.cin}
-                  </div>
-                  <p className="text-[11px] text-muted-foreground/90 leading-snug pt-1">
-                    {COMPANY_INFO.indiaEntity.building}
-                    <br />
-                    {COMPANY_INFO.indiaEntity.city}, {COMPANY_INFO.indiaEntity.country}
-                  </p>
                 </div>
+                <p className="text-xs text-muted-foreground/90 leading-snug pt-1">
+                  {COMPANY_INFO.malaysiaEntity.building}
+                  <br />
+                  {COMPANY_INFO.malaysiaEntity.street}
+                  <br />
+                  {COMPANY_INFO.malaysiaEntity.postalCode} {COMPANY_INFO.malaysiaEntity.city},{" "}
+                  {COMPANY_INFO.malaysiaEntity.country}
+                </p>
               </div>
             </div>
           </div>
 
-          {/* Bottom Bar with Verified Repos & Copyright */}
+          {/* Bottom Bar */}
           <div className="mt-12 border-t border-border/60 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
             <div className="flex items-center gap-2">
               <span className="font-mono text-[11px]">
-                © {new Date().getFullYear()} SKAND Technologies. All rights reserved.
+                © {new Date().getFullYear()} SKAND TECHNOLOGIES SDN BHD. All rights reserved.
               </span>
             </div>
 
-            {/* Verified Open Source & NDA Notice */}
             <div className="flex flex-wrap items-center gap-4 text-[11px]">
-              <a
-                href="https://github.com/skhy-ai/wsl-linux-disk-manager-cleaner"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-1 text-foreground hover:underline"
-              >
-                <Terminal className="h-3 w-3" />
-                Verified Tool: wsl-linux-disk-manager-cleaner
-                <ExternalLink className="h-2.5 w-2.5" />
-              </a>
+              <span className="text-muted-foreground">Kuala Lumpur, Malaysia</span>
               <span className="text-border">|</span>
               <span className="text-muted-foreground">
-                Proprietary &amp; defense code delivered under Mutual NDA
+                Proprietary &amp; enterprise systems delivered under Mutual NDA
               </span>
             </div>
           </div>
