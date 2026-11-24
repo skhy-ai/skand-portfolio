@@ -587,7 +587,7 @@ function IndexPage() {
             </h3>
             <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl leading-relaxed">
               Procure complete suites with an automatic 25% discount on the total contract:{" "}
-              <strong>Tier 1 Core at RM 6,900</strong> (was RM 9,200),{" "}
+              <strong>Tier 1 Core at RM 5,400</strong> (was RM 7,200),{" "}
               <strong>Tier 2 Scale (Tier 1 + Advanced Infrastructure) at RM 18,375+</strong> (was RM
               24,500+), or{" "}
               <strong>Tier 3 Master Suite (All Tier 2 + Enterprise Add-ons) at RM 25,275+</strong>{" "}
@@ -777,7 +777,7 @@ function IndexPage() {
                   rel="noreferrer"
                   className="font-medium text-foreground hover:underline inline-flex items-center gap-1"
                 >
-                  WhatsApp: +60123172237 <ExternalLink className="h-2.5 w-2.5" />
+                  WhatsApp: {COMPANY_INFO.contact.whatsappMalaysia} <ExternalLink className="h-2.5 w-2.5" />
                 </a>
               </div>
             </div>
@@ -800,14 +800,14 @@ function IndexPage() {
                 Corporate Identification No (CIN):{" "}
                 <span className="text-foreground">{COMPANY_INFO.indiaEntity.cin}</span>
               </div>
-              <p className="text-xs text-muted-foreground leading-relaxed pt-1">
-                {COMPANY_INFO.indiaEntity.building}
-                <br />
-                {COMPANY_INFO.indiaEntity.street}
-                <br />
-                {COMPANY_INFO.indiaEntity.city}, {COMPANY_INFO.indiaEntity.state}{" "}
-                {COMPANY_INFO.indiaEntity.postalCode}, {COMPANY_INFO.indiaEntity.country}
-              </p>
+              <div className="pt-1 space-y-0.5">
+                <span className="text-[10px] font-mono uppercase text-muted-foreground block">
+                  Registered Corporate Office
+                </span>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  {COMPANY_INFO.indiaEntity.registeredOffice}
+                </p>
+              </div>
               <div className="pt-2 flex items-center gap-3 text-xs">
                 <a
                   href={`tel:${COMPANY_INFO.contact.phoneIndia}`}

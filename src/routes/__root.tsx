@@ -310,12 +310,12 @@ function RootComponent() {
                 <span>
                   Direct WhatsApp:{" "}
                   <a
-                    href="https://wa.me/60123172237"
+                    href={COMPANY_INFO.contact.whatsappUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="text-foreground hover:underline"
                   >
-                    +60123172237
+                    {COMPANY_INFO.contact.whatsappMalaysia}
                   </a>
                 </span>
               </div>

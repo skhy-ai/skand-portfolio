@@ -399,20 +399,6 @@ function ContactPage() {
 
                 <div>
                   <span className="text-[11px] font-mono text-muted-foreground block">
-                    Defense R&amp;D Hub Location
-                  </span>
-                  <p className="text-muted-foreground leading-relaxed mt-0.5 font-mono text-xs">
-                    {COMPANY_INFO.indiaEntity.building}
-                    <br />
-                    {COMPANY_INFO.indiaEntity.street}
-                    <br />
-                    {COMPANY_INFO.indiaEntity.city}, {COMPANY_INFO.indiaEntity.state}{" "}
-                    {COMPANY_INFO.indiaEntity.postalCode}, {COMPANY_INFO.indiaEntity.country}
-                  </p>
-                </div>
-
-                <div>
-                  <span className="text-[11px] font-mono text-muted-foreground block">
                     Registered Corporate Office
                   </span>
                   <p className="text-muted-foreground leading-relaxed mt-0.5 font-mono text-xs">

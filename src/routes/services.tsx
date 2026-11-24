@@ -30,7 +30,7 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Transparent indicative Malaysian Ringgit (MYR) starting prices for website development, Stripe payments, database architecture, authentication, educational courseware, and enterprise AI & security systems.",
+          "Transparent indicative Malaysian Ringgit (MYR) starting prices for website development, Stripe payments, database architecture, authentication, and enterprise AI & security systems.",
       },
       {
         property: "og:title",
@@ -408,7 +408,7 @@ function ServicesPage() {
                 variant="outline"
                 className="text-xs font-semibold tracking-wider uppercase h-11 px-6"
               >
-                Direct WhatsApp (+60123172237)
+                Direct WhatsApp ({COMPANY_INFO.contact.whatsappMalaysia})
               </Button>
             </a>
           </div>

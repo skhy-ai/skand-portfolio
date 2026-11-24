@@ -36,16 +36,14 @@ export const COMPANY_INFO = {
     title: "Global Headquarters & R&D",
     legalName: "SKAND DEV TECHNOLOGIES (OPC) PVT LTD",
     cin: "U62010UP2025OPC235270",
-    locations: ["Pune, Maharashtra", "India"],
-    building: "Pune Defense Innovation Hub",
-    street: "R&D Corridor, Baner / Viman Nagar",
-    postalCode: "411014",
-    city: "Pune",
-    state: "Maharashtra",
+    locations: ["India"],
+    city: "Maharajganj",
+    state: "Uttar Pradesh",
+    postalCode: "273151",
     country: "India",
     registeredOffice: "1386, Sheshpur, Maharajganj, Uttar Pradesh 273151, India",
     formattedAddress:
-      "Pune Defense Innovation Hub, Baner / Viman Nagar, Pune, Maharashtra 411014, India",
+      "1386, Sheshpur, Maharajganj, Uttar Pradesh 273151, India",
   },
 
   // Direct Communication
@@ -54,10 +52,10 @@ export const COMPANY_INFO = {
     secondaryEmail: "contact@skhysignal.com",
     inquiryEmail: "contact@skhy.systems",
     phoneIndia: "+91-9335193489",
-    phoneMalaysia: "+60123172237",
-    whatsappMalaysia: "+60123172237",
+    phoneMalaysia: "+601116370315",
+    whatsappMalaysia: "+601116370315",
     whatsappUrl:
-      "https://wa.me/60123172237?text=Hello%20SKAND%20Technologies%2C%20I%20would%20like%20to%20discuss%20a%20project.",
+      "https://wa.me/601116370315?text=Hello%20SKAND%20Technologies%2C%20I%20would%20like%20to%20discuss%20a%20project.",
     website: "https://skand.systems",
   },
 
@@ -289,19 +287,6 @@ export const COMPANY_INFO = {
           "Password reset & profile update flows",
         ],
       },
-      {
-        id: "courseware",
-        title: "Educational Courseware & Tutorial Labs",
-        startingPriceMYR: "2,000",
-        description:
-          "Interactive technical curriculum, interactive labs, code runner sandboxes, or modular LMS documentation portals.",
-        deliverables: [
-          "Structured course module navigation",
-          "Interactive exercises & code snippet execution",
-          "Progress tracking & completion state",
-          "Downloadable cheat sheets & PDF export",
-        ],
-      },
     ],
     enterprise: [
       {
@@ -405,19 +390,18 @@ export const COMPANY_INFO = {
           tierNumber: "Tier 1",
           title: "Tier 1: Core Growth Foundation",
           tierBadge: "Tier 1 Baseline",
-          unbundledTotalMYR: "9,200",
-          discountedPriceMYR: "6,900",
-          savingsMYR: "2,300",
+          unbundledTotalMYR: "7,200",
+          discountedPriceMYR: "5,400",
+          savingsMYR: "1,800",
           summary: "Essential digital presence, transaction processing & secure user foundation.",
           description:
-            "Complete digital presence and transaction stack: responsive custom web app, Stripe customer portal and billing, normalized database architecture, OAuth/JWT access control, and modular educational courseware.",
+            "Complete digital presence and transaction stack: responsive custom web app, Stripe customer portal and billing, normalized database architecture, and OAuth/JWT access control.",
           includesPredecessor: null,
           includedServices: [
             "Website & Web Application Development (RM 3,000)",
             "Stripe & Payment Gateway Integration (RM 1,200)",
             "Database Architecture & Integration (RM 1,800)",
             "Authentication & Access Control (RM 1,200)",
-            "Educational Courseware & Tutorial Labs (RM 2,000)",
           ],
           highlight: "Ideal for Startups & Fast-Scaling Tech Ventures",
         },
@@ -433,7 +417,7 @@ export const COMPANY_INFO = {
           description:
             "Builds directly on Tier 1 to deliver institutional sovereign architecture: cross-platform desktop platforms, multi-currency bilateral financing rails, high-scale distributed pgvector clustering, enterprise SAML SSO + Kyber post-quantum cryptography, and interactive simulation training LMS.",
           includesPredecessor:
-            "Includes Everything in Tier 1 (Web, Payments, Database, Auth, Courseware)",
+            "Includes Everything in Tier 1 (Web, Payments, Database, Auth)",
           extraFeaturesTitle: "What's Added in Tier 2 (Advanced Infrastructure):",
           includedServices: [
             "Mission-Grade Web & Desktop Platforms (RM 8,500+)",
