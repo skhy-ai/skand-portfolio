@@ -16,6 +16,9 @@ import {
   Terminal,
   Activity,
   FileCode,
+  Gift,
+  Tag,
+  Percent,
 } from "lucide-react";
 
 export const Route = createFileRoute("/services")({
@@ -79,6 +82,123 @@ function ServicesPage() {
             AI, security hardening, and high-concurrency architectures.
           </p>
         </div>
+
+        {/* ── Christmas Offer: 25% Off Total Bundle Pricing ── */}
+        <section
+          id="christmas-offer"
+          className="rounded-2xl border-2 border-border/90 bg-gradient-to-b from-card via-card/80 to-background p-6 sm:p-10 space-y-8 shadow-2xl relative overflow-hidden"
+        >
+          {/* Background festive glow */}
+          <div className="pointer-events-none absolute -top-24 right-1/4 h-64 w-64 rounded-full bg-foreground/5 blur-3xl" />
+
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 border-b border-border/80 pb-6 relative">
+            <div className="space-y-2 max-w-2xl">
+              <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3.5 py-1 text-xs font-mono text-muted-foreground">
+                <Gift className="h-3.5 w-3.5 text-foreground animate-bounce" />
+                <span>{COMPANY_INFO.pricing.christmasOffer.badge}</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground">
+                {COMPANY_INFO.pricing.christmasOffer.title}
+              </h2>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Save <strong>25% on the total contract value</strong> when procuring our
+                comprehensive engineering suites as bundled offerings.{" "}
+                {COMPANY_INFO.pricing.christmasOffer.validNotice}.
+              </p>
+            </div>
+
+            <div className="rounded-lg border border-border/80 bg-background/80 px-4 py-3 text-right hidden sm:block">
+              <div className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                Special Incentive
+              </div>
+              <div className="text-xl font-bold font-mono text-foreground flex items-center justify-end gap-1">
+                <Percent className="h-4 w-4 text-emerald-400" />
+                <span>25% Instant Reduction</span>
+              </div>
+            </div>
+          </div>
+
+          {/* 3 Bundle Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative">
+            {COMPANY_INFO.pricing.christmasOffer.bundles.map((bundle) => (
+              <div
+                key={bundle.id}
+                className={`rounded-xl border p-6 flex flex-col justify-between card-hover relative bg-card ${
+                  bundle.id === "master-bundle"
+                    ? "border-foreground/40 shadow-lg ring-1 ring-border/80"
+                    : "border-border/80"
+                }`}
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="rounded-sm bg-secondary px-2.5 py-0.5 text-[10px] font-mono uppercase tracking-wider text-muted-foreground">
+                      {bundle.tierBadge}
+                    </span>
+                    <span className="rounded-full bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 text-[10px] font-mono text-emerald-400 font-semibold">
+                      Save RM {bundle.savingsMYR}
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-bold text-foreground">{bundle.title}</h3>
+                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">
+                      {bundle.description}
+                    </p>
+                  </div>
+
+                  {/* Pricing Display with Strike-through */}
+                  <div className="rounded-lg border border-border/60 bg-background/60 p-3.5 space-y-1">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground">
+                      <span>Regular Unbundled Total:</span>
+                      <span className="line-through font-mono text-xs">
+                        RM {bundle.unbundledTotalMYR}
+                      </span>
+                    </div>
+                    <div className="flex items-baseline justify-between pt-1">
+                      <span className="text-xs font-mono font-medium text-foreground">
+                        Christmas Bundle:
+                      </span>
+                      <span className="text-2xl sm:text-3xl font-bold font-mono text-foreground">
+                        RM {bundle.discountedPriceMYR}
+                      </span>
+                    </div>
+                    <div className="text-[10px] font-mono text-emerald-400 text-right">
+                      Includes 25% discount on total
+                    </div>
+                  </div>
+
+                  {/* Deliverables Checklist */}
+                  <div className="space-y-2 pt-2">
+                    <span className="text-[10px] font-mono uppercase text-muted-foreground block">
+                      Suite Inclusions:
+                    </span>
+                    <ul className="space-y-1.5 text-xs text-muted-foreground">
+                      {bundle.includedServices.map((service, idx) => (
+                        <li key={idx} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-foreground shrink-0 mt-0.5" />
+                          <span>{service}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-border/60">
+                  <Link to="/contact">
+                    <Button
+                      size="sm"
+                      variant={bundle.id === "master-bundle" ? "default" : "outline"}
+                      className="w-full text-xs font-medium"
+                    >
+                      Lock in 25% Bundle Rate
+                      <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* ── Tier 1: Core / Growth Engineering ── */}
         <section className="space-y-8">

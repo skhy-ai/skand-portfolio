@@ -392,6 +392,68 @@ export const COMPANY_INFO = {
           "Priority 24/7 technical advisory, rapid incident response, and active architectural reviews.",
       },
     ],
+
+    // Christmas & Year-End Bundle Offers (25% Total Discount)
+    christmasOffer: {
+      title: "Christmas & Year-End Institutional Bundle Offer",
+      badge: "25% Off Total • Christmas Offer",
+      discountPercentage: 25,
+      validNotice: "Valid for Q4 / Year-End Engagements Initiated by Dec 31",
+      bundles: [
+        {
+          id: "core-bundle",
+          title: "Complete Core & Growth Engineering Suite",
+          tierBadge: "Tier 1 Bundle",
+          unbundledTotalMYR: "9,200",
+          discountedPriceMYR: "6,900",
+          savingsMYR: "2,300",
+          description:
+            "End-to-end commercial web and transaction stack: responsive custom web app, Stripe customer portal and billing, normalized database architecture, OAuth/JWT access control, and modular educational courseware.",
+          includedServices: [
+            "Website & Web Application Development (RM 3,000)",
+            "Stripe & Payment Gateway Integration (RM 1,200)",
+            "Database Architecture & Integration (RM 1,800)",
+            "Authentication & Access Control (RM 1,200)",
+            "Educational Courseware & Tutorial Labs (RM 2,000)",
+          ],
+          highlight: "Ideal for Startups & Fast-Scaling Tech Ventures",
+        },
+        {
+          id: "enterprise-bundle",
+          title: "Complete Mission-Grade Enterprise Suite",
+          tierBadge: "Tier 2 Bundle",
+          unbundledTotalMYR: "24,500+",
+          discountedPriceMYR: "18,375+",
+          savingsMYR: "6,125+",
+          description:
+            "Institutional sovereign architecture: mission-grade cross-platform application, multi-currency bilateral financing rails, high-scale distributed pgvector database clustering, enterprise SAML SSO + Kyber post-quantum cryptography, and interactive simulation training LMS.",
+          includedServices: [
+            "Mission-Grade Web & Desktop Platforms (RM 8,500+)",
+            "Global Multi-Currency & Bilateral Financing Rails (RM 3,500+)",
+            "High-Scale Database Clustering & Vector Stores (RM 4,500+)",
+            "Enterprise SSO & Post-Quantum Security Hardening (RM 3,000+)",
+            "Full-Scale Interactive Simulation LMS (RM 5,000+)",
+          ],
+          highlight: "Engineered for Sovereign Defense, Banking & Deep-Tech",
+        },
+        {
+          id: "master-bundle",
+          title: "Dual-Tier Sovereign Master Suite (Both Offerings Combined)",
+          tierBadge: "Core + Enterprise All-Inclusive",
+          unbundledTotalMYR: "33,700+",
+          discountedPriceMYR: "25,275+",
+          savingsMYR: "8,425+",
+          description:
+            "Complete technical engagement combining both Tier 1 Core and Tier 2 Enterprise capabilities with dedicated architecture reviews, production deployment hardening, and zero-cloud-egress guarantees.",
+          includedServices: [
+            "All 5 Core Growth modules (Web App, Stripe, DB, Auth, Courseware)",
+            "All 5 Enterprise Mission systems (Platform, Financing, Vector DB, SAML/PQC, Sim LMS)",
+            "Dedicated mission engineering SLA & priority milestone delivery",
+          ],
+          highlight: "Maximum Sovereign Assurance (Save RM 8,425+)",
+        },
+      ],
+    },
   },
 
   // Open Source Governance & Notice

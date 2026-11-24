@@ -19,6 +19,7 @@ import {
   ArrowUpRight,
   Sparkles,
   ChevronRight,
+  Gift,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -520,6 +521,31 @@ function IndexPage() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Christmas Bundle Offer Banner */}
+        <div className="rounded-xl border border-border/90 bg-gradient-to-r from-card via-card/70 to-card p-6 flex flex-col md:flex-row items-center justify-between gap-6 card-hover">
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-mono text-muted-foreground">
+              <Gift className="h-3.5 w-3.5 text-foreground animate-bounce" />
+              <span>Christmas Offer • 25% Off Total</span>
+            </div>
+            <h3 className="text-xl font-bold text-foreground">
+              Institutional Bundle Pricing for Both Engineering Offerings
+            </h3>
+            <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl leading-relaxed">
+              Procure complete suites with an automatic 25% discount on the total contract:{" "}
+              <strong>Core Growth Suite at RM 6,900</strong> (was RM 9,200),{" "}
+              <strong>Enterprise Mission Suite at RM 18,375+</strong> (was RM 24,500+), or{" "}
+              <strong>Both Offerings Combined at RM 25,275+</strong> (save RM 8,425+).
+            </p>
+          </div>
+          <Link to="/services" hash="christmas-offer" className="shrink-0">
+            <Button size="default" className="text-xs font-semibold">
+              Inspect Christmas Bundles
+              <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
+            </Button>
+          </Link>
         </div>
 
         {/* Enterprise Highlights Strip */}
