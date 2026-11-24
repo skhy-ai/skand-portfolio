@@ -154,81 +154,133 @@ function IndexPage() {
             </Link>
           </div>
 
-          {/* 4 Client Platforms with Real Website Screenshots in Browser Chrome */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {/* 4 Client Platforms with Real Website Screenshots in Browser Chrome - Expanded & Prominent Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
             {COMPANY_INFO.clients.map((client) => (
               <div
                 key={client.id}
-                className="group relative flex flex-col justify-between rounded-xl border border-border/90 bg-card overflow-hidden card-hover"
+                className="group relative flex flex-col justify-between rounded-2xl border border-border/90 bg-card/90 overflow-hidden shadow-xl card-hover transition-all duration-300 hover:border-foreground/40 hover:shadow-2xl"
               >
                 <div>
                   {/* Browser Chrome Header */}
-                  <div className="flex items-center justify-between border-b border-border/80 bg-background/80 px-3 py-2 text-[10px] font-mono text-muted-foreground">
-                    <div className="flex items-center gap-1.5">
-                      <span className="h-2 w-2 rounded-full bg-red-500/70" />
-                      <span className="h-2 w-2 rounded-full bg-amber-500/70" />
-                      <span className="h-2 w-2 rounded-full bg-emerald-500/70" />
+                  <div className="flex items-center justify-between border-b border-border/80 bg-background/90 px-4 py-3 text-xs font-mono text-muted-foreground">
+                    <div className="flex items-center gap-2">
+                      <span className="h-2.5 w-2.5 rounded-full bg-red-500/80 inline-block" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80 inline-block" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-emerald-500/80 inline-block" />
                     </div>
-                    <span className="truncate max-w-[140px] text-muted-foreground/70">
-                      {client.domain}
-                    </span>
-                    <a
-                      href={client.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                      title={`Visit ${client.name}`}
-                    >
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </a>
+
+                    {/* URL Bar Pill */}
+                    <div className="flex items-center gap-1.5 rounded-md border border-border/60 bg-secondary/50 px-3 py-1 text-[11px] text-muted-foreground/90 max-w-[260px] truncate">
+                      <Lock className="h-3 w-3 text-emerald-400 shrink-0" />
+                      <span className="truncate">{client.domain}</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <span className="hidden sm:inline-flex items-center gap-1.5 text-[10px] font-mono text-emerald-400 font-medium">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                        Live Platform
+                      </span>
+                      <a
+                        href={client.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-foreground transition-colors p-0.5"
+                        title={`Open ${client.name} in new tab`}
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                      </a>
+                    </div>
                   </div>
 
-                  {/* Real Website Screenshot */}
-                  <div className="relative aspect-[16/10] bg-black/80 overflow-hidden border-b border-border/60">
+                  {/* Real Website Screenshot - Large & Immersive */}
+                  <div className="relative aspect-[16/10] bg-black/90 overflow-hidden border-b border-border/70 group/img">
                     {client.previewImage ? (
                       <img
                         src={client.previewImage}
                         alt={`${client.name} live website screenshot`}
-                        className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                         loading="lazy"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-secondary/50 text-xs font-mono text-muted-foreground">
+                      <div className="w-full h-full flex items-center justify-center bg-secondary/50 text-sm font-mono text-muted-foreground">
                         {client.domain}
                       </div>
                     )}
-                    <div className="absolute top-2 left-2 rounded-xs bg-black/80 backdrop-blur-xs px-2 py-0.5 text-[9px] font-mono uppercase text-foreground border border-border/80">
-                      {(client.category.split("&")[0] ?? client.category).trim()}
+                    {/* Category Overlay Tag */}
+                    <div className="absolute top-3 left-3 rounded-md bg-black/85 backdrop-blur-md px-3 py-1 text-[11px] font-mono uppercase text-foreground border border-border/80 shadow-md">
+                      {client.category}
                     </div>
                   </div>
 
-                  {/* Card Content */}
-                  <div className="p-4 space-y-2">
-                    <h3 className="text-base font-bold text-foreground transition-colors">
-                      {client.name}
-                    </h3>
-                    <p className="text-xs text-muted-foreground/90 line-clamp-3 leading-relaxed">
+                  {/* Card Content - Generously Padded & Richly Detailed */}
+                  <div className="p-6 sm:p-8 space-y-4">
+                    <div className="space-y-1.5">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
+                          {client.domain}
+                        </span>
+                        <span className="text-xs font-mono text-emerald-400 flex items-center gap-1 sm:hidden">
+                          <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Live
+                        </span>
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground transition-colors">
+                        {client.name}
+                      </h3>
+                      {client.tagline && (
+                        <p className="text-xs sm:text-sm font-mono text-muted-foreground">
+                          {client.tagline}
+                        </p>
+                      )}
+                    </div>
+
+                    <p className="text-sm sm:text-base text-muted-foreground/95 leading-relaxed">
                       {client.summary}
                     </p>
+
+                    {/* Architectural Highlights */}
+                    {client.highlights && client.highlights.length > 0 && (
+                      <div className="pt-3 border-t border-border/60 space-y-2">
+                        <div className="text-[11px] font-mono font-semibold uppercase tracking-wider text-muted-foreground">
+                          Key Architecture &amp; Capabilities
+                        </div>
+                        <ul className="space-y-2 text-xs sm:text-sm text-muted-foreground">
+                          {client.highlights.slice(0, 3).map((hl, idx) => (
+                            <li key={idx} className="flex items-start gap-2.5">
+                              <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0 mt-0.5" />
+                              <span className="leading-snug">{hl}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
 
-                {/* Card Footer Links */}
-                <div className="p-4 pt-3 border-t border-border/60 flex items-center justify-between text-xs">
-                  <Link
-                    to="/work"
-                    hash={client.id}
-                    className="text-[11px] font-medium text-foreground hover:underline inline-flex items-center gap-1"
-                  >
-                    Case Study <ChevronRight className="h-3 w-3" />
+                {/* Card Footer Actions */}
+                <div className="p-6 sm:p-8 pt-4 border-t border-border/70 bg-secondary/20 flex flex-wrap items-center justify-between gap-3">
+                  <Link to="/work" hash={client.id}>
+                    <Button
+                      size="sm"
+                      className="text-xs font-semibold tracking-wider uppercase h-9 px-4 gap-1.5"
+                    >
+                      Explore Case Study
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Button>
                   </Link>
                   <a
                     href={client.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[11px] font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    Live Site <ExternalLink className="h-2.5 w-2.5" />
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="text-xs font-mono h-9 px-4 border-border hover:bg-secondary gap-1.5"
+                    >
+                      Visit Live Site
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </Button>
                   </a>
                 </div>
               </div>
