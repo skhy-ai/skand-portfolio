@@ -18,6 +18,7 @@ import {
   Server,
   ArrowUpRight,
   Sparkles,
+  ChevronRight,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -196,7 +197,7 @@ function IndexPage() {
                       </div>
                     )}
                     <div className="absolute top-2 left-2 rounded-xs bg-black/80 backdrop-blur-xs px-2 py-0.5 text-[9px] font-mono uppercase text-foreground border border-border/80">
-                      {client.category.split("&")[0].trim()}
+                      {(client.category.split("&")[0] ?? client.category).trim()}
                     </div>
                   </div>
 
